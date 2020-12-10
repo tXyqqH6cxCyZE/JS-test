@@ -1,0 +1,182 @@
+@import './public.scss';
+// 头部
+html,body{
+    height: 100%;
+}
+.header > .bottom{
+    margin-top: 0;
+}
+.header > .bottom .header-bottom ul li a{
+    padding: 0px 8.3px;
+}
+// 主体部分
+.box{
+    display: flex;
+    margin-top: 150px;
+    display: flex;
+}
+.left{
+    position: relative;
+    width: 500px;
+    margin-right: 60px;
+    height: 620px;
+    display: flex;
+    flex-direction: column;
+    border: gray 1px solid;
+    .back{
+        width: 400px;
+        height: 400px;
+        // border: 1px solid red;
+        position: absolute;
+        left: 119%;
+        z-index: 100;
+        display: none;
+        background: url('../images/mi/banner1.jpg') no-repeat 0 0 / 800px 800px;
+    }
+    .top{
+        width: 100%;
+        flex: 1;
+        position: relative;
+        p{
+            width: 100%;
+            height: 490px;
+        }
+        .show1{
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0,0,0,0.2);
+            position: absolute;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            cursor: pointer;
+            display: none;
+        }
+    }
+    .bottom{
+        border-top: gray 1px solid;
+        width: 100%;
+        height: 150px;
+        @include flex();
+        p{
+            width: 50px;
+            height: 50px;
+            border: gray 1px solid;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+    }
+}
+.right{
+    flex: 1;
+    padding: 20px;
+    >p{
+        font-size: 35px;
+        font-weight: 900;
+        margin-bottom: 40px;
+        width: 100%;
+    }
+    .gray{
+        font-size: 20px;
+        margin-right: 30px;
+    }
+    h1{
+        margin-bottom: 40px;
+        i{
+            color: orange;
+            margin-left: 20px;
+        }
+        span{
+            color: orange;
+            font-size: 30px;
+        }
+        b{
+            margin-left: 20px;
+            background-color: rgba(0,0,0,0.2);
+            border-radius: 10px;
+            padding: 0px 5px;
+        }
+    }
+    .num{
+        margin-top: 40px;
+        margin-bottom: 40px;
+        display: flex;
+        align-items: center;
+        .big{
+            @include flex();
+            .btn{
+                display: flex;
+                input{
+                    border: 1px solid gray;
+                    width: 60px;
+                    height: 50px;
+                    padding-left: 10px;
+                }
+                p{
+                    button{
+                        @include flex();
+                        flex-direction: column;
+                        border: 1px solid gray;
+                        height: 25px;
+                        width: 30px;
+                        margin-left: 3px;
+                    }
+                }
+            }
+            span{
+                i{
+                    color: orange;
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+    .go{
+        margin-bottom: 40px;
+        button{
+            font-size: 30px;
+            margin-right: 20px;
+        }
+    }
+    .text{
+       span{
+            color:grey;
+            &:first-child{
+                margin-left: 20px;
+            }
+       }
+    }
+    .do{
+        >span{
+            position: absolute;
+            top:10px;
+            font-size: 20px;
+        }
+        margin-top: 30px;
+        &.active{
+            display: none;
+        }
+        div{
+            font-size: 20px;
+            // margin-top: 15px;
+            color: grey;
+            position: absolute;
+            bottom: 5px;
+        }
+        cursor: pointer;
+    }
+    .one{
+        border: 1px solid grey;
+        height: 60px;
+        padding: 5px;
+    }
+    .two{
+        &:hover{
+            color: seagreen;
+        }
+    }
+}
+.hideshow{
+    position: relative;
+}
+

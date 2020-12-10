@@ -1,0 +1,394 @@
+body,p,input,button,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,legend,fieldset,figure{
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+	line-height: 1;
+}
+html,body{
+	height:100%
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+input,button{
+	outline: none;
+	border:0;
+}
+img{
+	vertical-align: top;
+	border: none;
+}
+.clear:after{
+	content:"";
+	display: block;
+	clear: both;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+}
+.clear{
+	zoom: 1;
+}
+
+h1,h2,h3,h4,h5,h6,b{
+	font-weight: 400;
+}
+i{
+	font-style: normal;
+}
+/* html{
+	font-size: 32ww;
+} */
+/* 写移动端扩大缩小随着分辨率变化的时候使用 */
+.center{
+	width: 1226px;
+	margin: 0 auto;
+}
+
+img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+@mixin flex ($a:flex,$b:center,$c:center) {
+    display: $a;
+    justify-content: $b;
+    align-items: $c;
+}
+
+.header{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    .header-top{
+        height: 120px;
+        width: 100%;
+        background-image: url(../images/mi/背景图.jpg);
+        background-position: 50%;
+        background-size: auto 120px;
+        position: absolute;
+        top: 0;
+    }
+    >.bottom{
+        margin-top: 120px;
+        height: 40px;
+        width: 100%;
+        background-color: #333333;
+        .header-bottom ul{
+            @include flex($b:flex_start);
+            height: 40px;
+            li{
+                @include flex();
+                color: #B0B0B0;
+                font-size: 12px;
+                height: 40px;
+                cursor: pointer;
+                &:hover{
+                    color: white;
+                }
+                a{
+                    @include flex();
+                    padding: 0px 9px;
+                    color: #B0B0B0;
+                    border-right:2px #423C37 solid;
+                    &:hover{
+                        color: white;
+                    }
+                    height: 40px;
+                }
+                &:nth-of-type(11){
+                    position: relative;
+                    &:hover{
+                        .triple{
+                            display: flex;
+                        } 
+                    }
+                    .triple{
+                        position: absolute;
+                        bottom: 0px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 0;
+                        height: 0;
+                        border: 4px solid transparent;
+                        border-bottom: 4px solid white;
+                        display: none;
+                    }
+                    .nth11{
+                        @include flex();
+                        flex-direction: column;
+                        width: 100px;
+                        height: 140px;
+                        background-color: white;
+                        position: absolute;
+                        top: 40px;
+                        z-index: 3;
+                        box-shadow: 2px 2px 5px 1px gray;
+                        display: none;
+                        .imgbox{
+                            width: 80px;
+                            height: 80px;
+                            position: absolute;
+                            top: 0px;
+                            left: 10px;
+                            padding-top: 10px;
+                        }
+                        .bottom{
+                            @include flex();
+                            height: 40px;
+                            font-size: 15px;
+                            color:#333;
+                            position: absolute;
+                            top: 90px;
+                            left: 5px;
+                        }
+                        
+                    }
+                }
+                &:nth-of-type(13){
+                    margin-right: 70px;
+                    a{
+                        border-right: none;
+                    }
+                }
+                &:nth-of-type(16){
+                    a{
+                        border-right: none;
+                    }
+                }
+                &:nth-of-type(17){
+                    width:120px;
+                    background-color: #424242;
+                    @include flex();
+                    position: relative;
+                    .imgbox{
+                        height: 25px;
+                        width: 25px;
+                        margin-right: 5px;
+                    }
+                    .text{
+                        width: 350px;
+                        height: 100px;
+                        background: white;
+                        position: absolute;
+                        top: 40px;
+                        z-index: 3;
+                        right: 0;
+                        font-size:16px;
+                        @include flex();
+                        color: #333;
+                        box-shadow: 2px 2px 5px 2px gray;
+                        display: none;
+                    }
+                }     
+                
+            };
+            
+            
+        }
+    }
+    
+}
+.header > .bottom .header-bottom ul li.login{
+	p{
+		&.active{
+			display: none
+		}
+	}
+}
+
+// 尾部
+.foot{
+	padding-bottom: 40px;
+}
+.foot ol{
+	height: 79px;
+	text-align: center;
+	border-bottom: 1px solid #e0e0e0;
+	display: flex;
+}
+.foot ol li{
+	float: left;
+	margin-top: 27px;
+	width: 25%;
+	display: flex;
+}	
+.foot ol .lilast a{
+	border-right:0;
+}
+.foot ol li a{
+	color: #616161;
+	width: 242px;
+	display: block;
+	font-size: 15px;
+	border-right: 1px solid #e0e0e0;
+	height: 20px;
+	display: flex;
+	&:hover{
+		color: orange;
+	}
+}
+.foot ol li img{
+	margin-right: 11px;
+	width: 20px;
+	height: 20px;
+}
+.foot ul{
+	width: 160px;
+	padding-top: 42px;
+	float: left;
+}
+.foot ul li a{
+	font-size: 11px;
+	color: #757575;
+	line-height:27px;
+	cursor: pointer;
+	&:hover{
+		color: orange;
+	}
+}
+.foot ul .lifirst a{
+	font-size: 12px;
+	color: #424242;
+}
+.foot ul .lifirst{
+	margin-bottom: 24px;
+	font-size: 13px;
+	cursor: none;
+}
+.foot .ul{
+	float: left;
+}
+.foot .staff{
+	padding-top: 40px;
+	float: right;
+	
+}
+.foot .staff div{
+	border-left: 1px solid #e0e0e0;
+	padding-left: 57px;
+	padding-right: 60px;
+	padding-bottom: 4px;
+	width: 257px;
+	box-sizing: border-box;
+	text-align: center;
+}
+.foot .staff div h3{
+	font-size: 16px;
+	color: #ff6700;
+	line-height: 1;
+	font-weight: 400;
+	margin-bottom: 7.5px;
+}
+.foot .staff div h4{
+	font-size: 11px;
+	color: #616161;
+	line-height: 18px;
+	font-weight: 400;
+}
+.foot .staff div h5{
+	border: 1px solid #ff6700;
+	font-size: 11px;
+	color: #ff6700;
+	font-weight: 400;
+	width: 118px;
+	height: 28px;
+	line-height: 28px;
+	text-align: left;
+	background: url(小米/staff.png) no-repeat 27px center;
+	padding-left: 42px;
+	box-sizing: border-box;
+	margin: 0 auto;
+	margin-top: 15.5px;
+}
+/* 结尾最后 */
+.footer{
+	height: 250px;
+	background-color:#fafafa;
+	padding-top: 30px;
+	box-sizing: border-box;
+}
+.footercenter li{
+	float: left;
+	font-size: 11px;
+	padding: 0px 3px;
+	border-right: 1px solid #757575;
+}
+.footercenter li a{
+	color: #757575;
+	&:hover{
+		color: orange;
+	}
+}
+.footercenter .center1{
+	float: right;
+	padding-right: 47px;
+	width: 1111px;
+	box-sizing: border-box;
+}
+.footercenter>img{
+	float: left;
+	width: 57px;
+	height: 57px;
+}
+.footercenter .lilast{
+	border: none;
+}
+.footercenter div p{
+	font-size: 11px;
+	color: #b0b0b0;
+	line-height: 19px;
+	
+}
+.footercenter ul{
+	margin-bottom: 25px;
+}
+.footercenter .pic5 img{
+	float: left;
+	margin-top: 4px;
+	width: 85px;
+	height: 28px;
+	margin-bottom: 32px;
+}
+.footercenter div h1{
+	font-size: 18px;
+	color: #bababa;
+	line-height: 1;
+	font-weight: 400;
+	text-align: center;
+}
+/* 右小角定位部分 */
+// .footercenter{
+// 	position:relative;
+// }
+.location{
+	position: fixed;
+	overflow: hidden;
+	top:50%;
+	transform: translateY(-50%);
+	right:0px;
+}
+.footercenter .location img{
+	display: block;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #f5f5f5;
+	border-top: none;
+	background-color: white;
+	padding: 5px 0px;
+}
+.location p .img6{
+	margin-top: 14px;
+	border: 1px solid #f5f5f5;
+}
+.location p.active{
+	display: none;
+}
+
+.search,.pic3,.quick,.mobilebottom,.foot,.ul,.footcenter,.pic5{
+	overflow: hidden;
+}

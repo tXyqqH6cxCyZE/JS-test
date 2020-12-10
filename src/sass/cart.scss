@@ -1,0 +1,217 @@
+@import './public.scss';
+
+html,body{
+    height: 100%;
+}
+.header > .bottom{
+    margin-top: 0;
+}
+.header > .bottom .header-bottom ul li a{
+    padding: 0px 8.3px;
+}
+// 购物车内无内容的页面
+.off,.on{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    &.active{
+        display: none;
+    }
+    .top{
+        @include flex();
+        justify-content: flex-start;
+        margin-bottom: 10px;
+        p{
+            width: 50px;
+            height: 50px;
+            background-color: #FA6103;
+        }
+        span{
+            font-size: 40px;
+            color: #333;
+            margin-left: 50px;
+            margin-right: 10px;
+        }
+    }
+    .bottom{
+        @include flex();
+        height: 600px;
+        width: 100%;
+        background: #F5F5F5;
+        border-top: 3px solid #FA6103;
+        p{
+            font-size: 30px;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        a{
+            background-color: #FA6103;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 10px;
+        }
+       
+    }
+}
+.second{
+    background-color: #F5F5F5;
+    margin-top: 20px;
+    border-top: 3px solid #FA6103;
+    padding: 20px;
+}
+.all{
+    height: 50px;
+    background-color: white;
+    // margin-top: 20px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    input{
+         width: 20px;
+         height: 20px;
+    }
+    span{
+        // background-color: red;
+        &:nth-of-type(1){
+            width: 200px;
+        }
+        &:nth-of-type(2){
+            width: 400px;
+            @include flex();
+        }
+        &:nth-of-type(3){
+            width: 150px;
+            @include flex();
+        }
+        &:nth-of-type(4){
+            width: 150px;
+            @include flex();
+        }
+        &:nth-of-type(5){
+            width: 150px;
+            @include flex();
+        }
+        &:nth-of-type(6){
+            width: 150px;
+            @include flex();
+        }
+    }
+
+}
+.item{
+    li{
+        @include flex();
+        background-color: white;
+        justify-content: flex-start;
+        // margin-bottom: 15px;
+        border-top: 1px solid silver;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        input{
+            width: 20px;
+            height: 20px;
+        }
+        p{
+            width: 100px;
+            height: 100px;
+            margin: 0px 47.5px;
+        }
+        span{
+            &:nth-of-type(1){
+                width: 389px;
+                @include flex();
+                
+            }
+            &:nth-of-type(2){
+                width: 146px;
+                @include flex();
+            }
+            &:nth-of-type(3){
+                width: 170px;
+                color: orange;
+                @include flex();
+            }
+        }
+        .div{
+            @include flex();
+            width: 110px;
+            margin-left: 20px;
+            border: 1px solid grey;
+            // margin-right: 0px;
+            input{
+                height: 30px;
+                width: 50px;
+                padding-left: 10px;
+            }
+            button{
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+            }
+        }
+        .del{
+            width: 30px;
+            height: 30px;
+            margin-left: 45px;
+            background-color: white;
+            &:hover{
+                background-color: red;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                color: white;
+            }
+        }
+    }
+}
+.third{
+    position: relative;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    color:#757575;
+    box-sizing: border-box;
+    margin-top: 20px;
+    background-color: white;
+    h1{
+        font-size: 25px;
+        margin-right: 25px;
+    }
+    h2{
+        font-size: 18px;
+        width: 300px;
+        span{
+            color:#F25807;
+        }
+    }
+    div{
+        p{
+            width: 300px;
+        }
+        color: #F25807;
+        // margin-left: 550px;
+        margin-right: 50px;
+        span{
+            font-size: 40px;
+        }
+    }
+    >button{
+        background-color: #F25807;
+        height: 50px;
+        width: 150px;
+        @include flex();
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        &:first-of-type{
+            position: absolute;
+            right: 170px;
+        }
+        &:last-of-type{
+            position: absolute;
+            right: 0px;
+        }
+    }
+}

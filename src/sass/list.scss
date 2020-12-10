@@ -1,0 +1,168 @@
+@import './public.scss';
+
+html,body{
+    height: 100%;
+}
+.header > .bottom{
+    margin-top: 0;
+}
+.header > .bottom .header-bottom ul li a{
+    padding: 0px 8.3px;
+}
+.list{
+    width: 1226px;
+    height: 500px;
+    margin: 20px auto;
+    background: url('../images/mi/banner4.jpg') no-repeat center center/1226px 500px;
+    
+}
+.list ul{
+    background-color: rgba(0,0,0,0.4);
+    padding: 20px;
+    height: 460px;
+}
+.list ul li{
+    display: flex;
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+    @include flex();
+    justify-content: flex-start;
+    >span{
+        width: 100px;
+        height: 40px;
+        @include flex();
+        background-color: silver;
+        margin-right: 20px;
+    }
+    .right{
+        flex: 1;
+        @include flex();
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        span{
+            position: relative;
+            padding: 10px;
+            background-color: silver;
+            margin: 5px;
+            cursor: pointer;
+            &:hover{
+                background-color: slategray;
+                color: white;
+            }
+            &:hover div{
+                display: block;
+            }
+            &.active{
+                background-color: slategray;
+                color: white;
+            }
+            div{
+                display: none;
+                position: absolute;
+                width: 100%;
+                top: 100%;
+                left:0%;
+                font-size: 12px;
+                background-color:white;
+                color: cadetblue;
+                p{
+                    @include flex();
+                    margin-bottom: 10px;
+                    &:hover{
+                        background-color: paleturquoise;
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}
+.box{
+    height: 100px;
+    border: 1px solid grey;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    position: relative;
+    .boxmin{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 900px;
+        @include flex();
+    }
+}
+.item{
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    p{
+        width: 100%;
+        font-size: 900;
+        font-size: 25px;
+        margin-bottom: 20px;
+        &:hover{
+            color: orange;
+        }
+    }
+    div{
+        box-shadow: 1px 1px 10px 1px gray;
+        padding: 10px;
+        box-sizing: border-box;
+        width: 285px;
+        height: 400px;
+        border: 1px solid silver;
+        @include flex();
+        flex-direction: column;
+        margin-right: 24px;
+        margin-bottom: 24px;
+        &:hover{
+            transform: translateY(-2px);
+        }
+        &:nth-of-type(4n){
+            margin: 0;
+        }
+        p{
+            width: 150px;
+            height: 150px;
+            margin-bottom: 30px;
+            cursor: pointer;
+        }
+        h3{
+            font-weight: 900;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        h6{
+            margin-bottom: 10px;
+            line-height: 20px;
+            font-size: 15px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+        }
+        h4{
+            span{
+                color: orange;
+                margin-right: 10px;
+            }
+        }
+        h5{
+            margin-top: 20px;
+            button{
+                background-color: silver;
+                padding: 10px;
+                font-size: 18px;
+                border-radius: 10px;
+                margin-right:5px;
+                cursor: pointer;
+                &:last-child{
+                    background-color: gray;
+                }
+            }
+        }
+    }
+}
+
